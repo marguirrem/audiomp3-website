@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -48,7 +48,7 @@
                         @else
 
                             <li>
-                                <a href="#">Artistas</a>
+                                <a href="artists">Artistas</a>
                             </li>
                             
                             <li>
