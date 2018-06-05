@@ -1,0 +1,10 @@
+.photo-small{
+  border-radius: 50%;
+  height: 50px;
+  widows: 50px;
+}
+.photo-medium{
+  border-radius: 50%;
+  height: 150px;
+  widows: 150px;
+}
