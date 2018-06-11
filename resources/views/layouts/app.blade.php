@@ -49,7 +49,7 @@
             @else
 
               <li>
-                <a href="artists">Artistas</a>
+                <a href="{{ url('artists') }}">Artistas</a>
               </li>
 
               <li>
@@ -57,11 +57,11 @@
               </li>
 
               <li>
-                <a href="#">Albums</a>
+                <a href="{{ url('albumes') }}">Albumes</a>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                  <img class="photo-small" src="{{ Storage::url(Auth::user()->photo) }}" alt="Avatar">{{ Auth::user()->username }} <span class="caret"></span>
+                  <img class="photo-small" src="{{ Storage::url(Auth::user()->photo) }}" alt="Avatar"> {{ Auth::user()->username }} <span class="caret"></span>
                 </a>
 
                 <ul class="dropdown-menu">

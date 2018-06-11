@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('artists', 'ArtistController');
 Route::resource('songs', 'SongController');
+Route::resource('albumes', 'AlbumController');
