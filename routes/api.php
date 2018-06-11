@@ -14,20 +14,18 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+  return $request->user();
 });
 
 Route::middleware(['auth'])->group(function () {
 
-
-
-    Route::get('user/profile', function () {
-        // Uses first & second Middleware
-    });
+  Route::get('user/profile', function () {
+    // Uses first & second Middleware
+  });
 });
 
 Route::get('user/register','Service\ServiceUserController@store');
 Route::post('user/register','Service\ServiceUserController@store');
 
 Route::post('/user/login','Service\ServiceUserController@login');
-
+Route::post('/artists','Service\ServiceArtistController@index');
