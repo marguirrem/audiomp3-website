@@ -13,7 +13,8 @@ class AlbumController extends Controller
   */
   public function index()
   {
-    return view('album.index');
+    $albumes = \App\Album::all();
+    return view('album.index',compact('albumes'));
   }
 
   /**
@@ -36,7 +37,17 @@ class AlbumController extends Controller
   */
   public function store(Request $request)
   {
-    //
+    $validatedData = $request->validate([
+      'name' => 'required|unique:albums|min:4|max:255',
+      'artist_id' => 'required',
+      'release_year' => 'required|max:10',
+    ]);
+    $album = \App\Album::create([
+      'name'=>$request['name'],
+      'artist_id'=>$request['artist_id'],
+      'release_year'=>$request['release_year'],
+    ]);
+    return redirect('albumes')->with('status','Album creado con exito!');
   }
 
   /**
